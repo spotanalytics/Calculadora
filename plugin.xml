@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0" xmlns:android="http://schemas.android.com/apk/res/android" id="cordova-plugin-calculadora" version="1.0.0">
+   <name>Calculadora</name>
+   <js-module name="Calculadora" src="www/Calculadora.js">
+      <clobbers target="Calculadora" />
+   </js-module>
+   <platform name="android">
+      <config-file parent="/*" target="res/xml/config.xml">
+         <feature name="Calculadora">
+            <param name="android-package" value="cordova.plugin.calculadora.Calculadora" />
+         </feature>
+      </config-file>
+      <config-file parent="/*" target="AndroidManifest.xml" />
+      <source-file src="src/android/Calculadora.java" target-dir="src/cordova/plugin/calculadora/Calculadora" />
+   </platform>
+  
+</plugin>
